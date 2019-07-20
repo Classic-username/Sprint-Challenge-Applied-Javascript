@@ -20,4 +20,7 @@ let data = axios
             divMaster.appendChild(topic)
         })
     })
+    .catch(denied => {
+        console.log('error', denied)
+    });
 
