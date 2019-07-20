@@ -21,7 +21,12 @@
 let alsoData = axios
     .get('https://lambda-times-backend.herokuapp.com/articles')
     .then(result => {
-        console.log(result.data.articles)
+        console.log(result.data)
+        // let keyname = Object.keys(result.data.articles)
+        // console.log(keyname) attempt to not hardcode the name 'javascript' or
+        // result.data.articles.keyname.forEach((cv) => {
+        //     CreateCard(cv)
+        // })
         result.data.articles.javascript.forEach((cv) => {
             CreateCard(cv)
         })
@@ -37,6 +42,9 @@ let alsoData = axios
         result.data.articles.node.forEach((cv) => {
             CreateCard(cv)
         })
+    })
+    .catch(denied => {
+        console.log("error", denied)
     })
 
 let cardMOM = document.querySelector('.cards-container')
@@ -66,5 +74,4 @@ function CreateCard(cv){
     let span = document.createElement('span');
     span.textContent = `By ${cv.authorName}`;
     divM.appendChild(span);
-
 }
