@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The Document Object Model is what javascript accesses to make a website dynamic. Anything to do with the site is done throught document.(ex: createElement(), querySelector() ect.)
+
 2. What is an event?
+
+An event is the user interacting with the page, be it keyboard, mouse, or touch the screen.
 
 3. What is an event listener?
 
+An event listener is something the site programmer adds to an element of the site to see if the user did something. Ex: you would add a click event listener if you wanted the user to click a link and pull up an image.
+
 4. Why would we convert a NodeList into an Array?
 
+NodeLists don't have array methods. Converting it to an array allows us to every array method.
+
 5. What is a component?
+
+Components are reusable pieces of code that can be used multiple times in a website or across multiple websites that allow use of dynamic information.
 
 ### Git Set up
 
